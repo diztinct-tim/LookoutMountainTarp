@@ -8,8 +8,8 @@
 
 
 .body {
-    margin-bottom: spacing("double") * 2;
-    margin-top: spacing("single"); // 1
+    margin-bottom: 0px;
+    margin-top: 0px; // 1
 
     @include breakpoint("medium") {
         margin-top: spacing("single") + spacing("base"); // 1
@@ -54,3 +54,109 @@
         }
     }
 }
+
+.main-hero{
+    background:url('../../assets/img/mobile-hero.jpg');
+    background-repeat:no-repeat;
+    height: 0px;
+    background-size: 100%;
+    background-position: center center;
+    padding-bottom: 50%;
+}
+.container {
+    width:100%;
+    max-width: 1120px;
+    padding: 0px;
+}
+.main-hero .mobile-text {
+    padding-top: calc(50% + 20px);
+    display: block;
+    text-align: center;
+    font-family: "Roboto Slab";
+    color: #000;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-hero > a {
+    text-align: center;
+    display: block;
+    background: #ce0d17;
+    font-size:16px;
+    width: 150px;
+    margin: 15px auto 10px;
+    padding: 10px;
+    font-family: "Open Sans";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+.hero-wrap {
+    height: 0px;
+    padding-bottom: calc(100% + 30px);
+}
+.custom-orders {
+    background: #eee;
+    padding: 20px;
+}
+.custom-orders h3{
+    margin-top:0px;
+    text-align:center;
+    color:#000;
+    font-size:20px;
+    font-family:"Roboto Slab";
+    font-weight:700;
+}
+.custom-orders h3 span{
+    color:#ce0d17;
+}
+.custom-orders p{
+    font-family:"Open Sans";
+    font-size:14px;
+    font-weight:400;
+    padding:0px 20px;
+    color:#000;
+    text-align:center;
+    margin-bottom:10px;
+}
+.home-featured-categories{
+
+}
+.home-featured-categories ul{
+    margin-left:0px;
+    list-style:none;
+    margin-bottom:0px;
+}
+.home-featured-categories ul > li > h4:before{
+    content:"+";
+    color:#ce0d17;
+    position:absolute;
+    left:20px;
+}
+.home-featured-categories ul > li > h4{
+    padding:5px 20px 5px 35px;
+    margin:0px;
+    border-top:1px solid #ccc;
+    font-family:"Roboto Slab";
+    color:#000;
+    font-size:20px;
+    cursor:pointer;
+    position:relative;
+}
+.home-featured-categories ul > li > ul{
+    display:none;
+    padding:0px 20px;
+}
+.home-featured-categories ul > li > ul > li{
+    padding:5px 0px;
+}
+
+
+
+
+
+
+
+
+

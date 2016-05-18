@@ -13,7 +13,7 @@
 
 .navUser {
     @include nav($style: "navBar", $wrapper: "nav");
-    @include verticalPositionMiddle("absolute");
+    position:static;
     right: 0;
     top: 26px; // 2
     width: 100%; // 4
@@ -158,11 +158,7 @@
 }
 
 .navUser-item-cartLabel {
-    display: none;
-
-    @include breakpoint("small") {
-        display: inline;
-    }
+    display: inline;
 }
 
 .navUser-item--compare {
