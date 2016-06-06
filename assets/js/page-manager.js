@@ -1,6 +1,11 @@
 export default class PageManager {
     before(next) {
         next();
+
+        if($("div.main.full").hasClass("home-page")){
+            $("div.body").addClass("home");
+        }
+
     }
 
     loaded(next) {

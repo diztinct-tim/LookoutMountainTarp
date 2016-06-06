@@ -1,18 +1,23 @@
-{{#if social_media}}
-    <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
-    <ul class="socialLinks socialLinks--alt">
-        {{#each social_media}}
-            <li class="socialLinks-item">
-                {{#if display_name '===' 'google+'}}
-                    <a class="icon icon--google" href="{{url}}" target="_blank">
-                        <svg><use xlink:href="#icon-google" /></svg>
-                    </a>
-                {{else}}
-                    <a class="icon icon--{{display_name}}" href="{{url}}" target="_blank">
-                        <svg><use xlink:href="#icon-{{display_name}}" /></svg>
-                    </a>
-                {{/if}}
-            </li>
-        {{/each}}
-    </ul>
-{{/if}}
+<ul class="socialLinks socialLinks--alt">
+    <li class="socialLinks-item">
+        <a class="icon icon--twitter" href="{{url}}" target="_blank">
+            <svg><use xlink:href="#icon-twitter" /></svg>
+        </a>
+    </li>
+    <li class="socialLinks-item">
+        <a class="icon icon--facebook" href="{{url}}" target="_blank">
+            <svg><use xlink:href="#icon-facebook" /></svg>
+        </a>
+    </li>
+    <li class="socialLinks-item">
+        <a class="icon icon--pinterest" href="{{url}}" target="_blank">
+            <svg><use xlink:href="#icon-pinterest" /></svg>
+        </a>
+    </li>
+    <li class="socialLinks-item">
+        <a class="icon icon--instagram" href="{{url}}" target="_blank">
+            <svg><use xlink:href="#icon-instagram" /></svg>
+        </a>
+    </li>    
+</ul>
+

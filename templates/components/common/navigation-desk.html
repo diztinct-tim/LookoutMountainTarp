@@ -1,0 +1,32 @@
+<nav class="navUser">
+
+    <ul class="navUser-section navUser-section--alt">
+
+        <li class="navUser-item navUser-item--account">
+            {{#if customer}}
+                <a class="navUser-action" href="{{urls.account.index}}">Account</a> <span>|</span>
+                <a class="navUser-action" href="{{urls.auth.logout}}">Logout</a>
+            {{else}}
+                <a class="navUser-action" href="{{urls.auth.login}}">Login</a> <span class="navUser-or">or</span> <a class="navUser-action" href="{{urls.auth.create_account}}">Register</a>
+            {{/if}}
+        </li>
+
+        <li class="navUser-item navUser-item--account">
+            <a class="navUser-action" href="{{urls.account.index}}">My Account</a>
+        </li>
+
+        <li class="navUser-item navUser-item--cart">
+            <a
+                class="navUser-action"
+                data-cart-preview
+                data-dropdown="cart-preview-dropdown"
+                data-options="align:right"
+                href="{{urls.cart}}">
+                <span class="navUser-item-cartLabel"><img width="20px" height="18px" src="../assets/img/desk-cart.png" alt="cart" /></span> Cart <span class="countPill countPill--positive cart-quantity">({{cart.quantity}})</span>
+            </a>
+
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+        </li>
+    </ul>
+
+</nav>

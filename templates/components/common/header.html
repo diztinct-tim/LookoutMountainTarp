@@ -1,21 +1,47 @@
 <div class="top-msg">
-    <div class="us-made">
-        <p><img src="../assets/img/us-flag.jpg" alt="US Flag">All Tarps Made in America</p>
+    <div class="top-container cf">
+        <div class="us-made">
+            <p><img src="../assets/img/us-flag.jpg" alt="US Flag">All Tarps Made in America</p>
+        </div>
+        <span class="desk-account">
+        {{> components/common/navigation-desk}}
+        </span>
     </div>
 </div>
+
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
 
-    {{> components/common/navigation}}
+    <span class="mobile-cart">
+        {{> components/common/navigation}}
+    </span>
 
     <div class="header-logo">
         {{> components/common/store-logo}}
     </div>
 
+    <div class="header-why-shop">
+        <ul class="cf">
+            <li>
+                <h4>Fast, Free Shipping <span>30 Day Returns</span></h4>
+            </li>
+            <li>
+                <h4>Custom Orders Call <span>1-800-852-8277</span></h4>
+            </li>
+            <li>
+                <h4>High Quality Tarps <span>Made To Order</span></h4>
+            </li>            
+        </ul>
+    </div>
+
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}
+    </div>
+
+    <div class="desk-search">
+        {{> components/common/search-box}}
     </div>
 
     <div class="mobile-ship-msg">

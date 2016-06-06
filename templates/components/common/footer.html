@@ -8,63 +8,73 @@
 <footer class="footer" role="contentinfo">
     <div class="container">
         <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
+            <article class="footer-info-col footer-info-col--small">
+                <h5 class="footer-info-heading">Customer Service</h5>
                 <ul class="footer-info-list">
-                    {{#each pages}}
+                    <li><a href="/about-us/">About Us</a></li>
+                    <li><a href="/employment/">Employment</a></li>
+                    <li><a href="/shipping/">Shipping</a></li>
+                    <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="/contact-us/">Contact Us</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small">
+                <h5 class="footer-info-heading">Company Info</h5>
+                <ul class="footer-info-list">
+                    <li><a href="/about-us/">My Account</a></li>
                     <li>
-                        <a href="{{url}}">{{name}}</a>
+                        {{#if customer}}
+                            <a href="{{urls.account.index}}">{{lang 'common.account'}}</a> |
+                            <a href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                        {{else}}
+                            <a href="{{urls.auth.login}}">{{lang 'common.login'}}</a> or </span> <a href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+                        {{/if}}
                     </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+                    <li><a href="/returns-exchanges/">Returns & Exchanges</a></li>
+                    <li><a href="/cart.php">My Cart</a></li>
+                    <li><a href="/warranty-info/">Warranty Info</a></li>
+                </ul>
+            </article>
+
+             <article class="footer-info-col categories-column">
+                <h5 class="footer-info-heading">Categories</h5>
+                <ul class="footer-info-list">
+                    <li><a href="">Privacy Shades & Screens</a></li>
+                    <li><a href="">Swimming Pool Covers</a></li>
+                    <li><a href="">Truck & Trailer Supplies</a></li>
+                    <li><a href="">Other Tarps</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col newsletter" data-section-type="newsletterSubscription">
+
+                {{> components/common/subscription-form}}
+
+                <div class="social">
+                    {{> components/common/social-links}}
+                </div>
+
+            </article>
+
+            
+
+            <article class="copyright">
+                <p>All images, videos, content, and design property of Lookout Mountain Tarp (LMT). © 1927-2016. All rights reserved.<br>
+                <a href="https://www.diztinct.com/bigcommerce-design.html">BigCommerce Design</a> by Diztinct.com</p>
+                <ul>
+                    <li class="digicert">
+                        <img src="../assets/img/digicert.jpg" alt="">
                     </li>
+                    <li><img src="../assets/img/payment-visa.jpg" alt=""></li>
+                    <li><img src="../assets/img/payment-mastercard.jpg" alt=""></li>
+                    <li><img src="../assets/img/payment-discover.jpg" alt=""></li>
+                    <li><img src="../assets/img/payment-amex.jpg" alt=""></li>
+                    <li><img src="../assets/img/payment-paypal.jpg" alt=""></li>
                 </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
-                {{#if settings.show_newsletter_box}}
-                    {{> components/common/subscription-form}}
-                {{/if}}
-                {{> components/common/social-links}}
-                {{> components/common/payment-icons}}
             </article>
         </section>
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">Powered by <a href="http://bigcommerce.com" rel="nofollow">BigCommerce</a></p>
-            </div>
-        {{/if}}
+
     </div>
 </footer>
