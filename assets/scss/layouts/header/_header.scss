@@ -451,8 +451,18 @@ ul.navPages-list > li {
 .navPages-list.navPages-list--user > li{
     background:#121212;
 }
-
-
+.navPage-subMenu-action.navPages-action.has-subMenu::before {
+    top: 16px;
+}
+.navPage-subMenu-action.navPages-action.has-subMenu.is-open:before{
+    top:11px;
+}
+li.navPage-subMenu-item > .navPage-childList > .navPage-childList-item > a {
+    font-size: 15px;
+    font-family: "Open Sans" !important;
+    text-transform: capitalize;
+    font-weight: 700;
+}
 
 
 
@@ -621,7 +631,7 @@ ul.navPages-list > li {
         font-size:16px;
     }
     .navPages {
-        border-top: 1px solid #ccc;
+        border: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
     }
     .navPages-action.has-subMenu::before {
@@ -634,7 +644,7 @@ ul.navPages-list > li {
         position: absolute;
         left: 15px;
     }
-    .navPages-action.has-subMenu::before {
+    .navPages-action.has-subMenu::before, .navPages-action.has-subMenu.is-open::before {
         content: "";
         height: 0px;
         width: 0px;
@@ -645,6 +655,9 @@ ul.navPages-list > li {
         position: absolute;
         left: auto;
         right: 5px;
+    }
+    .navPage-subMenu.is-open{
+        width:auto;
     }
     .navPages-action.has-subMenu:hover ~ div.navPage-subMenu, .navPages-action.has-subMenu ~ div.navPage-subMenu:hover {
         display: block !important;

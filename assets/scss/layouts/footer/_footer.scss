@@ -134,7 +134,7 @@ footer.footer{
     background:#eceff0;
 }
 footer.footer .container{
-    padding: 30px 20px 20px 20px;
+    padding: 30px 20px 5px 20px !important;
 }
 .footer-info{
     margin:0px;
@@ -217,7 +217,7 @@ footer.footer .container{
     height:auto;
 }
 .copyright p, .copyright p > a{
-    margin:20px 0px 25px;
+    margin:10px 0px 5px;
     font-size:12px;
     line-height:16px;
     color:#000;
@@ -240,6 +240,9 @@ footer.footer .container{
 }
 .categories-column{
     display:none;
+}
+.footer-info-col.newsletter {
+    margin-bottom: 5px;
 }
 
 

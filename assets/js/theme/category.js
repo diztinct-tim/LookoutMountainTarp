@@ -3,6 +3,29 @@ import CatalogPage from './catalog';
 import $ from 'jquery';
 import FacetedSearch from './common/faceted-search';
 
+
+$(function(){
+
+    function ifLanding(){
+        if($(".cat-landing").length){
+            $("div.body").addClass("landing-page");
+            if($(window).width() < 768){
+                var landing = $(".cat-landing").detach();
+                landing.insertAfter('.page');
+            } else {
+                $("h1.page-heading").detach().insertBefore(".cat-landing > .text-wrap > p");
+                var landingDesk = $(".cat-landing").detach();
+                landingDesk.prependTo("#product-listing-container");
+            }
+        }
+        console.log("running func");
+    }
+    ifLanding();
+
+
+
+})
+
 export default class Category extends CatalogPage {
     loaded() {
         if ($('#facetedSearch').length > 0) {

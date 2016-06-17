@@ -9,6 +9,50 @@ import ProductDetails from './common/product-details';
 import videoGallery from './product/video-gallery';
 import { classifyForm } from './common/form-utils';
 
+$(function(){
+
+
+        function checkIfSlider(){
+            var imgs = $(".productView-thumbnails li").length;
+            if( imgs > 3 ){
+                $(".productView-thumbnails").slick({
+                  dots: false,
+                    responsive: [{
+                        breakpoint: 1024,
+                          settings: {
+                            slidesToShow: 6,
+                            slidesToScroll: 3,
+                          }
+                        }, {
+
+                          breakpoint: 768,
+                          settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 3,
+                          }
+                        }, {
+
+                          breakpoint: 600,
+                          settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 2,
+                          }
+                        }, {
+
+                          breakpoint: 480,
+                          settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 2,
+                        }
+                    }]
+                });
+            }
+        }
+        checkIfSlider();
+
+
+})
+
 export default class Product extends PageManager {
     constructor() {
         super();
@@ -25,6 +69,10 @@ export default class Product extends PageManager {
         });
 
         next();
+
+        $("body").addClass("product-page");
+
+
     }
 
     loaded(next) {
